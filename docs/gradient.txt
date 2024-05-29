@@ -1,0 +1,5 @@
+background: linear-gradient(40deg, rgba(2,0,36,1) 0%, rgba(254,0,210,1) 0%, rgba(0,210,245,1) 100%);
+
+FE00D2
+
+00D2F5

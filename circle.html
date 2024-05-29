@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Hover Effect with Expanding Box</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .circle:hover + .expanding-box {
+            width: 300px;
+        }
+
+        .expanding-box {
+            width: 0;
+            height: 100px;
+            background-color: #2ecc71;
+            transition: width 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .expanding-box span {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .circle:hover + .expanding-box span {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <img src="your-image-url.jpg" alt="Circle Image">
+        </div>
+        <div class="expanding-box">
+            <span>Revealed Content</span>
+        </div>
+        <div class="circle">
+            <img src="your-image-url.jpg" alt="Circle Image">
+        </div>
+        <div class="expanding-box">
+            <span>Revealed Content</span>
+        </div>
+        <div class="circle">
+            <img src="your-image-url.jpg" alt="Circle Image">
+        </div>
+        <div class="expanding-box">
+            <span>Revealed Content</span>
+        </div>
+    </div>
+</body>
+</html>
