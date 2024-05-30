@@ -7,6 +7,7 @@
     <title>Nurman Alif Portfolio</title>
     <link rel="icon" href="images/nurmanalif logo.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -23,307 +23,135 @@
 
 
 </head>
-<header>
-    <!--<div id="nav-placeholder"></div>-->
-    
-
-</header>
-
 <body>
-    <div class="her">
-        <div class="fix"><a aria-label="Chat on WhatsApp" href="https://wa.me/601161389945" target="_blank" > <img alt="Chat on WhatsApp" class="webws" src="images/WhatsAppButtonGreenSmall.png" /><img alt="Chat on WhatsApp" src="images/icon_small_ws.png" class="mobilews" />
-            </a> </div>
-        <!--<section class="section1">Section 1</section>-->
-        <div class="nav-bar" >
-            
+    <!--<div class="fix">
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/601161389945" target="_blank" > <img alt="Chat on WhatsApp" class="webws" src="images/WhatsAppButtonGreenSmall.png" /><img alt="Chat on WhatsApp" src="images/icon_small_ws.png" class="mobilews" /> </a> 
+    </div>-->
+
+    <div class="nav-bar-container">
+        <div class="nav-bar" >  
             <a style="margin-right: auto;"><img src="images/nurmanalif logo.png" height="50px"></a>
             <a class="burger" onclick="openBurger()">=</a>
             <ul id="mobile-menu">
-                <li><a class="nav-button2" href="#sec1">About</a></li>
-                <li><a class="nav-button2" href="#sec3">Projects</a></li>
-                <li><a class="nav-button2" href="#sec4">Contact</a></li>
+                <li><a class="nav-link" href="#sec1">About</a></li>
+                <li><a class="nav-link" href="#sec3">Projects</a></li>
+                <li><a class="nav-button" href="https://web.whatsapp.com/send/?phone=601161389945" target="_blank">Message via WhatsApp</a></li>
             </ul>
-            <a class="nav-button" href="#sec4">GET IN TOUCH</a>
+            
             
         </div>
-        <div class="hero">
-            
-            <div class="hero-flex ">
-                <h1 class="hidden">Check out my portfolio,<br>it might surprise you!</h1>
-                <p class="hidden">Some people may like it. You may find some surprises
-                    if you explore <br> deep enough. Anyways, I'm Alif. Nice to meet you!</p>
-                <p class="hidden"><a class="main-button" href="docs/NurmanAlif_Resume.pdf">Download CV</a><a class="main-button2" href="#sec1" id="sec1">Start Explore >></a></p>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-bar">
+            <div class="hero-card">
+                <img src="images/hero3.png">
+                <div class="personal">
+                    <h1>Nurman Alif</h1>
+                    <p>Final Year Computer Science Student </p>
+                    <p>at Universiti Teknologi MARA (UiTM)</p>
+                    <a class="linkedin" href="https://www.linkedin.com/in/nurmanalif/" target="_blank"><p>Connect on LinkedIn</p></a>
+                </div>
+                <div class="hero-tab">
+                    <h1>Background</h1>
+                    <p>Hello, I'm Alif. I'm looking for internship in web / software development from 30 Sep 2024 to 1 Jan 2025.</p>
+                    <p>- Petaling Jaya, Malaysia</p>
+                </div>
+                <div class="hero-tab">
+                    <h1>Skills</h1>
+                    <p><span>Python</span> <span>Html</span> <span>Css</span> <span>Js</span> <span>Mysql</span> <span>Oracle</span></p>
+                    <p><span>Java</span> <span>C+</span> <span>C#</span></p>
+                </div>
+                <div class="hero-tab">
+                    <h1>Contact</h1>
+                    <p>Email: nurmanalif.ps@gmail.com</p>
+                    <p>Phone number: +6011-61389945</p>
+                </div>
+                <div class="hero-contact"><a href="docs/NurmanAlif_Resume.pdf">Download CV</a></div>
+            </div>
+            <div class="title">
+                <h1>Web Developer & Application Engineer</h1>
+                <div class="title-tab">
+                    <div style="cursor: pointer;" onclick="openContentTab1()">
+                        <p id="t1" class="tab-active">Web Development</p>
+                    </div>
+                    <div style="cursor: pointer;" onclick="openContentTab2()">
+                        <p id="t2">Application Engineering</p>
+                    </div>
+                    
+                </div>
+                <div id="content-tab1">
+                    <div class="content-card" style="cursor: pointer;" onclick="window.open('https://www.snkasia.com','_blank');">
+                        <img src="images/thumbnail-project1.png">
+                        <div class="content-card-details">
+                            <h1>S&K Asia Company Website</h1>
+                            <p>This 90+ page company website were build during my 3 month internship period back in 2019.<br></p>
+                            <p><span>Front-end</span> <span>Web Development</span></p>
+                        </div>
+                    </div>
+                    <div class="content-card" style="cursor: pointer;" onclick="window.location='#';">
+                        <img src="images/thumbnail-project2.png">
+                        <div class="content-card-details">
+                            <h1>Shopee Online Shopping Clone</h1>
+                            <p>This project is build to replicate one of the most popular online store with basic shopping functionality.</p>
+                            <p><span>Full-Stack</span> <span>Web Development</span></p>
+                        </div>
+                    </div>
+                    <div class="content-card" style="cursor: pointer;" onclick="window.location='#';">
+                        <img src="images/thumbnail-project3.png">
+                        <div class="content-card-details">
+                            <h1>College Transit Booking System</h1>
+                            <p>This system is to facilitate the college transport booking process at Mara Professional College.
+                            </p>
+                            <p><span>Full-Stack</span> <span>Web Development</span></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="content-tab2">
+                    <div class="content-card" style="cursor: pointer;" onclick="window.location='#';">
+                        <img src="images/thumbnail-project4.png">
+                        <div class="content-card-details">
+                            <h1>Verbal Lie Detection Using Machine Learning</h1>
+                            <p>This is my final year project utilize machine Learning
+                                to predict deceptive/lying behaviour.
+                            </p>
+                            <p><span>Python</span> <span>Machine Learning</span></p>
+                        </div>
+                    </div>
+                    <div class="content-card" style="cursor: pointer;" onclick="window.location='#';">
+                        <img src="images/thumbnail-project5.png">
+                        <div class="content-card-details">
+                            <h1>AI Shoe Recommendation System</h1>
+                            <p>This system takes shoe images as input and recommends the similar pair of shoes
+                                from the database.
+                            </p>
+                            <p><span>Python</span> <span>Machine Learning</span></p>
+                        </div>
+                        
+                    </div>
+                    <div class="content-card" style="cursor: pointer;" onclick="window.location='#';">
+                        <img src="images/thumbnail-project6.png">
+                        <div class="content-card-details">
+                            <h1>Vehicle Image Classifier</h1>
+                            <p>This system takes vehicle images as input and predicts the type of vehicle
+                                based on trained classifier.
+                            </p>
+                            <p><span>Python</span> <span>Machine Learning</span></p>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
             <!--<img src="images/hero3.png">-->
     
         </div>
     </div>
-    <div class="her2" >
-        <div class="hero2">
-            <div class="hero-flex " >
-                <img class="hidden" src="images/hero3.png">
-                
-            </div>
-            <div class="hero-flex ">
-                <h1 class="hidden">Little Bit About Me</h1>
-                <p class="hidden">I'm a computer science student, based in Petaling. <br>I have 1 year of professional
-                    experience in vanilla web development. <br>Problem solving is my niche. Other than that, I love working on <br>software
-                    engineering and web development projects</p>
-                <p class="hidden"><a class="main-button3" href="#sec2" id="sec2">My skills >></a></p>
-                
-            </div>
-            <!--<img src="images/hero3.png">-->
-    
-        </div>
-    </div>
-    
-    
-    <div class="home-1" id="bg" >
-        <div class="home-flex hidden">
-            <h1>My Technical Skills</h1>
-            <p>Things that I have learnt throughout my journey in computer science.
-            <br>It's fun!<br></p>
-
-        </div>
-        <div class="skill-flex">
-            <div class="skill-icon hidden" id="hov">
-                <p>Python</p>
-            </div>
-            <div class="skill-icon hidden" id="hov2">
-                <p>C++</p>
-            </div>
-            <div class="skill-icon hidden" id="hov3">
-                <p>C#</p>
-            </div>
-            <div class="skill-icon hidden" id="hov4">
-                <p>HTML</p>
-            </div>
-            <div class="skill-icon hidden" id="hov5">
-                <p>CSS</p>
-            </div>
-            <div class="skill-icon hidden" id="hov6">
-                <p>Javascript</p>
-            </div>
-            <div class="skill-icon hidden" id="hov7">
-                <p>MySql</p>
-            </div>
-            <div class="skill-icon hidden" id="hov8">
-                <p>Oracle</p>
-            </div>
-            <div class="skill-icon hidden" id="hov9">
-                <p>Java</p>
-            </div>
-        </div>
-        <!--<div class="slider">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper-slide--zero">
-                    </div>
-                    <div class="swiper-slide swiper-slide--one">
-                    </div>
-                    <div class="swiper-slide swiper-slide--two">
-                    </div>
-
-                    <div class="swiper-slide swiper-slide--three">
-                    </div>
-
-                    <div class="swiper-slide swiper-slide--four">
-                    </div>
-
-                    <div class="swiper-slide swiper-slide--five">
-                    </div>
-                    <div class="swiper-slide swiper-slide--six">
-                    </div>
-                    <div class="swiper-slide swiper-slide--seven">
-                    </div>
-                    <div class="swiper-slide swiper-slide--eight">
-                    </div>
-
-                </div>
-            </div>
-        </div>-->
-    </div>
-    <div class="home-1" id="sec3">
-        <div class="home-flex hidden">
-            <h1>My Projects</h1>
-        </div>
-        <div class="home-flex-3 hidden" id="tab-div">
-            <p><button class="tab-button active" onclick="openTab1()">Web Development</button></p>
-            <p><button class="tab-button" onclick="openTab2()">Application Engineering</button></p>
-        </div>
-
-        <div class="card-flex" id="tab1">
-            <div class="card card--one" id="t1c1" >
-                <img src="images/thumbnail-c1-1.png">
-                <div class="card-content">
-                    <h2>S&K Asia Company Website</h2>
-                    <p>This 90+ page company website were build during my 3 month internship period back in 2019.</p>
-                    <p><span>Front-end</span><span>Web Development</span></p>
-
-                </div>
-                <div class="open-button" id="openbutton1" onclick="popup('t1c1','openbutton1','closebutton1','closecontent1')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton1" onclick="popup2('t1c1','openbutton1','closebutton1','closecontent1')"> X
-                </div>
-                <div class="close-content" id="closecontent1">
-                    <img src="images/thumbnail-c1-1.png"><img src="images/thumbnail-c1-2.png">
-                </div>
-
-            </div>
-            <div class="card card--two" id="t1c2">
-                <img src="images/thumbnail-c2-1.png">
-                <div class="card-content">
-                    <h2>Shopee Online Shopping Clone</h2>
-                    <p>This project is build to replicate one of the most popular online store with basic shopping functionality.</p>
-                    <p><span>Full-Stack</span><span>Web Development</span></p>
-
-                </div>
-                <div class="open-button" id="openbutton2" onclick="popup('t1c2','openbutton2','closebutton2','closecontent2')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton2" onclick="popup2('t1c2','openbutton2','closebutton2','closecontent2')"> X
-                </div>
-                <div class="close-content" id="closecontent2">
-                    <img src="images/thumbnail-c2-1.png"><img src="images/thumbnail-c2-2.png">
-                </div>
-
-            </div>
-            <div class="card card--three" id="t1c3">
-                <img src="images/thumbnail-no.png">
-                <div class="card-content">
-                    <h2>College Transit Booking System</h2>
-                    <p>This system is to facilitate the college transport booking process at Mara Professional College.
-                    </p>
-                    <p><span>Full-Stack</span><span>Web Development</span></p>
-
-                </div>
-                <div class="open-button" id="openbutton3" onclick="popup('t1c3','openbutton3','closebutton3','closecontent3')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton3" onclick="popup2('t1c3','openbutton3','closebutton3','closecontent3')"> X
-                </div>
-                <div class="close-content" id="closecontent3">
-                    <img src="images/thumbnail-no.png"><img src="images/thumbnail-no.png">
-                </div>
-
-            </div>
-        </div>
-    
-        <div class="card-flex" id="tab2">
-            <div class="card card--one" id="t2c1">
-                <img src="images/thumbnail-no.png">
-                <div class="card-content">
-                    <h2>Verbal Lie Detection Using Machine Learning</h2>
-                    <p>This is my final year project utilize machine Learning
-                        to predict deceptive/lying behaviour.
-                    </p>
-                    <p><span>Python</span><span>Machine Learning</span></p>
-    
-                </div>
-                
-                <div class="open-button" id="openbutton4" onclick="popup('t2c1','openbutton4','closebutton4','closecontent4')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton4" onclick="popup2('t2c1','openbutton4','closebutton4','closecontent4')"> X
-                </div>
-                <div class="close-content" id="closecontent4">
-                    <img src="images/thumbnail-no.png"><img src="images/thumbnail-no.png">
-                </div>
-            </div>
-            <div class="card card--two" id="t2c2">
-                <img src="images/thumbnail-no.png">
-                <div class="card-content">
-                    <h2>AI Shoe Recommendation System</h2>
-                    <p>This system takes shoe images as input and recommends the similar pair of shoes
-                        from the database.
-                    </p>
-                    <p><span>Python</span><span>Machine Learning</span></p>
-    
-                </div>
-                <div class="open-button" id="openbutton5" onclick="popup('t2c2','openbutton5','closebutton5','closecontent5')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton5" onclick="popup2('t2c2','openbutton5','closebutton5','closecontent5')"> X
-                </div>
-                <div class="close-content" id="closecontent5">
-                    <img src="images/thumbnail-no.png"><img src="images/thumbnail-no.png">
-                </div>
-    
-            </div>
-            <div class="card card--three" id="t2c3">
-                <img src="images/thumbnail-no.png">
-                <div class="card-content">
-                    <h2>Vehicle Image Classifier</h2>
-                    <p>This system takes vehicle images as input and predicts the type of vehicle
-                        based on trained classifier.
-                    </p>
-                    <p><span>Python</span><span>Machine Learning</span></p>
-    
-                </div>
-                <div class="open-button" id="openbutton6" onclick="popup('t2c3','openbutton6','closebutton6','closecontent6')"> View More >>
-                </div>
-                <div class="close-button" id="closebutton6" onclick="popup2('t2c3','openbutton6','closebutton6','closecontent6')"> X
-                </div>
-                <div class="close-content" id="closecontent6">
-                    <img src="images/thumbnail-no.png"><img src="images/thumbnail-no.png">
-                </div>
-    
-            </div>
-            
-        </div>
-
-    </div>
-
-
-
-    <div class="her3" id="sec4">
-        <div class="hero3">
-            <div class="hero-flex3 ">
-                <h1 class="hidden">Contact Me</h1>
-                <p class="hidden">I'm Looking for internship position from 30 October 2024 to 3 January 2025</p>
-                <p class="hidden">My email: nurmanalif.ps@gmail.com</p>
-                <p class="hidden">Phone number: 011-61389945</p>
-                
-                
-            </div>
-    
-        </div>
-    </div>
-
-
-
-
-
 
 
 </body>
 <script>
-    /*
-    document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    let currentIndex = 0;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                currentIndex = Array.from(sections).indexOf(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    window.addEventListener('wheel', (event) => {
-        if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-            // Scrolling down
-            sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
-        } else if (event.deltaY < 0 && currentIndex > 0) {
-            // Scrolling up
-            sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});*/
 
     var item = document.getElementById('item1');
     function popup(x,y,z,a){
@@ -544,40 +372,33 @@ $(function() {
 `;
     document.head.appendChild(swiperStyles);
 
-    // Add active class to the current button (highlight it)
-    var header = document.getElementById("tab-div");
-    var btns = header.getElementsByClassName("tab-button");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active");
-            if (current.length > 0) {
-                current[0].className = current[0].className.replace(" active", "");
-            }
-            this.className += " active";
-        });
-    }
 
-    var tab1 = document.getElementById("tab1");
-    var tab2 = document.getElementById("tab2");
+    var contenttab1 = document.getElementById("content-tab1");
+    var contenttab2 = document.getElementById("content-tab2");
+    var t1 = document.getElementById("t1");
+    var t2 = document.getElementById("t2");
 
-    function openTab1() {
-        tab2.style.opacity = 0;
-        tab2.style.display = "none";
+    function openContentTab1() {
+        t1.classList.add("tab-active");
+        t2.classList.remove("tab-active");
+        contenttab2.style.opacity = 0;
+        contenttab2.style.display = "none";
 
-        tab1.style.display = "flex";
+        contenttab1.style.display = "block";
         setTimeout(function () {
-            tab1.style.opacity = 1;
+            contenttab1.style.opacity = 1;
         }, 50);
 
     }
-    function openTab2() {
+    function openContentTab2() {
+        t2.classList.add("tab-active");
+        t1.classList.remove("tab-active");
+        contenttab1.style.opacity = 0;
+        contenttab1.style.display = "none";
 
-        tab1.style.opacity = 0;
-        tab1.style.display = "none";
-
-        tab2.style.display = "flex";
+        contenttab2.style.display = "block";
         setTimeout(function () {
-            tab2.style.opacity = 1;
+            contenttab2.style.opacity = 1;
         }, 50);
 
 
